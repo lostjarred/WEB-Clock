@@ -22,7 +22,8 @@
 
         //set interval to update clock
             window.setInterval(updateclock, 1000)
-        //functon to update clock text
+        
+            //functon to update clock text
             function updateclock() {
                 let d = new Date();
                 let hours = d.getHours();
@@ -30,5 +31,8 @@
                 let secs = d.getSeconds();
                 timetext.innerHTML = hours + ":" + mins + ":" + secs;
             }
+        
+            //run function during page load 
+                updateclock();
     </script>
 </html>
