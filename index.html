@@ -13,7 +13,22 @@
     </head>
     <body>
         <div id="container">
-            <h1 style="margin-left: 40%; margin-right: 40%;">00:00:00</h1>
+            <h1 id="time-text" style="margin-left: 40%; margin-right: 40%;">00:00:00</h1>
         </div>
     </body>
+    <script>
+        //variable get time
+            let timetext = document.querySelector("#time-text")
+
+        //set interval to update clock
+            window.setInterval(updateclock, 1000)
+        //functon to update clock text
+            function updateclock() {
+                let d = new Date();
+                let hours = d.getHours();
+                let mins = d.getMinutes();
+                let secs = d.getSeconds();
+                timetext.innerHTML = hours + ":" + mins + ":" + secs;
+            }
+    </script>
 </html>
