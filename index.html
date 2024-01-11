@@ -59,6 +59,15 @@
                 let hours = d.getHours();
                 let mins = d.getMinutes();
                 let secs = d.getSeconds();
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+                if (mins < 10) {
+                    mins = "0" + mins;
+                }
+                if (secs < 10) {
+                    secs = "0" + secs;
+                }
                 timehourstext.innerHTML = hours;
                 timeminstext.innerHTML = mins;
                 timesecstext.innerHTML = secs;
