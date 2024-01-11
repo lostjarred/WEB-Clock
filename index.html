@@ -17,6 +17,9 @@
                 display: flex;
                 flex-direction: column;
             }
+            .time {
+                font-family: 'DigitTech16';
+            }
             @font-face {
                 font-family: 'DigitTech16';
                 src: url('font/DigitTech16-Regular.ttf') format('truetype');
@@ -27,11 +30,11 @@
         <div id="container">
             <div class="col" style="margin-left: 40%; margin-right: 40%;">
                 <div class="row">
-                    <h1 id="timehours">00</h1>
+                    <h1 id="timehours" class="time">00</h1>
                     <h1>:</h1>
-                    <h1 id="timeminutes">00</h1>
+                    <h1 id="timeminutes" class="time">00</h1>
                     <h1>:</h1>
-                    <h1 id="timeseconds">00</h1>
+                    <h1 id="timeseconds" class="time">00</h1>
                 </div>
             </div>
         </div>
