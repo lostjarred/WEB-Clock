@@ -68,11 +68,14 @@
             <div id="container2" class="col">
                 <div class="row">
                     <span id="digitcolour" class="row" style="color: red;">
-                        <h1 id="timehours" class="time glow">00</h1>
+                        <h1 id="timehours1" class="time glow">0</h1>
+                        <h1 id="timehours2" class="time glow">0</h1>
                         <h1 class="time blink">*</h1>
-                        <h1 id="timeminutes" class="time glow">00</h1>
+                        <h1 id="timeminutes1" class="time glow">0</h1>
+                        <h1 id="timeminutes2" class="time glow">0</h1>
                         <h1 class="time blink">*</h1>
-                        <h1 id="timeseconds" class="time glow">00</h1>
+                        <h1 id="timeseconds1" class="time glow">0</h1>
+                        <h1 id="timeseconds2" class="time glow">0</h1>
                     </span>
                 </div>
             </div>
@@ -80,9 +83,12 @@
     </body>
     <script>
         //variable get time
-            let timehourstext = document.querySelector("#timehours")
-            let timeminstext = document.querySelector("#timeminutes")
-            let timesecstext = document.querySelector("#timeseconds")
+            let timehourstext1 = document.querySelector("#timehours1")
+            let timehourstext2 = document.querySelector("#timehours2")
+            let timeminstext1 = document.querySelector("#timeminutes1")
+            let timeminstext2 = document.querySelector("#timeminutes2")
+            let timesecstext1 = document.querySelector("#timeseconds1")
+            let timesecstext2 = document.querySelector("#timeseconds2")
 
         //set interval to update clock
             window.setInterval(updateclock, 1000)
@@ -102,9 +108,12 @@
                 if (secs < 10) {
                     secs = "0" + secs;
                 }
-                timehourstext.innerHTML = hours;
-                timeminstext.innerHTML = mins;
-                timesecstext.innerHTML = secs;
+                timehourstext1.innerHTML = hours.toString().charAt(0);
+                timehourstext2.innerHTML = hours.toString().charAt(1);
+                timeminstext1.innerHTML = mins.toString().charAt(0);
+                timeminstext2.innerHTML = mins.toString().charAt(1);
+                timesecstext1.innerHTML = secs.toString().charAt(0);
+                timesecstext2.innerHTML = secs.toString().charAt(1);
             }
         
             //run function during page load 
